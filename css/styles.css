@@ -1,0 +1,229 @@
+/*? Declaracion de variables*/
+
+:root {
+    --off-red: #EF2604;
+    --dark-red: #8D1702;
+    --rich-black: #0D0A0A;
+    --light-night: #272727;
+    --ghost-white: #f4f4f9;
+    --selective-yellow: #ffb20f;
+    --white-smoke: #f1edee;
+    --black: #000000;
+}
+
+/*? CSS General*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Varela Round', sans-serif;
+}
+
+/*?Navbar*/
+
+.navbar i{
+    padding: 5px;
+}
+.navbar-brand{
+    font-size: 2rem !important;
+}
+.navbar-red {
+    background-color: var(--white-smoke); /* Color rojo */
+    padding: 1rem; /* Aumentar el padding para hacerlo más grande */
+    font-size: 1.2rem; /* Aumentar el tamaño de fuente */
+}
+
+.navbar-red .navbar-brand,
+.navbar-red .nav-link {
+    color: var(--off-red); /* Cambiar el color del texto a blanco para contraste */
+    transition: .3s; /* Agregar transición para suavizar el cambio de color */
+}
+
+.navbar-red .navbar-brand:hover,
+.navbar-red .nav-link:hover {
+    color: var(--dark-red); /* Cambiar el color al pasar el mouse */
+}
+
+.navbar-red .navbar-toggler {
+    border-color: var(--dark-red); /* Cambiar el color del borde del botón de toggler */
+}
+
+/*? Footer*/
+
+footer{
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--rich-black);
+    height: auto;
+    width: 100vm;
+    padding-top: 10px;
+    color: var(--ghost-white);
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3{
+    font-size: 28px;
+    font-weight: 700;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 24px;
+}
+
+.socials{
+    list-style: none;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.socials li{
+    margin: 0 10px;
+}
+
+.socials a{
+    text-decoration: none;
+    color: var(--ghost-white);
+}
+
+.socials a i{
+    font-size: 1.8rem;
+    transition: color .4s ease;
+}
+
+.socials a:hover i{
+    color: var(--off-red);
+}
+
+.footer-bottom{
+    background: var(--black);
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+/*?Banner*/
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.banner {
+    background-color: var(--rich-black);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 33.33%; /* Un tercio del ancho del banner */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+    padding: 20px;
+}
+
+.band p {
+    font-size: 3rem;
+    color: white;
+    margin: 0 0 20px;
+}
+
+.consulta-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: var(--off-red);
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.consulta-btn:hover {
+    background-color: var(--dark-red);
+    transition: .3s;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7; /* Hacer la imagen un poco opaca */
+    z-index: 1;
+    overflow: hidden;
+}
+
+.image-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegurar que la imagen cubra todo el área */
+}
+
+/*?Carousel*/
+
+.carousel {
+    height: 1000px; /* Altura fija del carousel */
+    overflow: hidden;
+    width: 80%;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+.carousel-item img {
+    height: 100%;
+    width: auto; /* Mantener la relación de aspecto */
+    object-fit: contain; /* Las imágenes se ajustarán al contenedor sin recortarse */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
