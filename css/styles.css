@@ -1,4 +1,13 @@
 /*? Declaracion de variables*/
+@font-face {
+    font-family: 'NaughtyMonster';
+    src: url('../fonts/NaughtyMonster.ttf') format('truetype') /* Cambiado a truetype */
+}
+
+@font-face {
+    font-family: 'Stash Black'; 
+    src: url('../fonts/StashBlack.otf') format('truetype'); /* Cambiado a truetype */
+}
 
 :root {
     --off-red: #EF2604;
@@ -27,11 +36,17 @@
 }
 .navbar-brand{
     font-size: 2rem !important;
+    font-family: 'NaughtyMonster', sans-serif!important;
+    color: var(--white-smoke)!important;
 }
 .navbar-red {
-    background-color: var(--white-smoke); /* Color rojo */
+    background-color: var(--rich-black); 
     padding: 1rem; /* Aumentar el padding para hacerlo más grande */
     font-size: 1.2rem; /* Aumentar el tamaño de fuente */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")!important;
 }
 
 .navbar-red .navbar-brand,
@@ -46,7 +61,195 @@
 }
 
 .navbar-red .navbar-toggler {
-    border-color: var(--dark-red); /* Cambiar el color del borde del botón de toggler */
+    border: 2px solid var(--off-red); /* Cambiar el color del borde del botón de toggler */
+}
+
+.h1_brand{
+    font-family: 'NaughtyMonster', sans-serif;
+}
+
+.h2_brand{
+    font-family: 'Stash Black', sans-serif;
+    font-size: smaller;
+    color: var(--off-red);
+}
+
+/*?Banner*/
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.banner {
+    background-color: var(--rich-black);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.banner-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 33.33%; /* Un tercio del ancho del banner */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+    padding: 20px;
+}
+
+.band p {
+    font-size: 5rem;
+    color: white;
+    margin: 0 0 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        width: 100%; /* Ajustar el ancho al 100% en pantallas más pequeñas */
+    }
+}
+
+.consulta-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: var(--off-red);
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.consulta-btn:hover {
+    background-color: var(--dark-red);
+    transition: .3s;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7; /* Hacer la imagen un poco opaca */
+    z-index: 1;
+    overflow: hidden;
+}
+
+.image-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegurar que la imagen cubra todo el área */
+}
+
+/*?Carousel*/
+
+.carousel {
+    background: var(--rich-black);
+    background-size: cover; /* Asegura que la imagen cubra toda el área */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    padding-top: 4rem; /* Espacio superior para el carrusel */
+    padding-bottom: 2rem; /* Espacio inferior para el carrusel */
+}
+
+.carousel .carousel-inner {
+    width: 60%; /* Ajusta el ancho del carrusel */
+    margin: 0 auto; /* Centrar horizontalmente */
+    border-radius: 5px;
+}
+
+.carousel-item img {
+    object-fit: cover; /* Asegura que las imágenes cubran bien el área del carrusel */
+    max-height: 1200px;
+    width: auto; /* Mantener la relación de aspecto */
+}
+
+/*?Intregrantes*/
+
+.integrantes {
+    background-image: url('/imgs/back.jpg');
+    background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    color: var(--black);
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+.integrantes h3 {
+    font-size: 3rem;
+    margin: 10px;
+}
+
+.integrantes h4 {
+    font-size: 2rem;
+    margin: 20px;
+}
+
+.integrantes .contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.integrantes-fotos {
+    margin: 30px;
+}
+
+.integrantes-fotos img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 7px solid var(--dark-red);
+}
+
+/*?Sticky Button*/
+
+.sticky-button{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    height: 60px;
+    width: 60px;
+    background-color: var(--off-red);
+    border-radius: 50%;
+}
+
+.sticky-button a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    color: var(--ghost-white);
+    font-size: 2em;
+    text-decoration: none;
+}
+
+.sticky-button a:hover{
+    background-color: var(--dark-red);
+    border-radius: 50%;
+    color: var(--color-intermedio);
+    transition: .5s;
 }
 
 /*? Footer*/
@@ -128,102 +331,4 @@ footer{
     text-transform: uppercase;
     opacity: .4;
     font-weight: 200;
-}
-
-/*?Banner*/
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-.banner {
-    background-color: var(--rich-black);
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
-}
-
-.banner-container {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 33.33%; /* Un tercio del ancho del banner */
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    z-index: 2;
-    padding: 20px;
-}
-
-.band p {
-    font-size: 3rem;
-    color: white;
-    margin: 0 0 20px;
-}
-
-.consulta-btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    color: white;
-    background-color: var(--off-red);
-    text-decoration: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.consulta-btn:hover {
-    background-color: var(--dark-red);
-    transition: .3s;
-}
-
-.image-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.7; /* Hacer la imagen un poco opaca */
-    z-index: 1;
-    overflow: hidden;
-}
-
-.image-overlay img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Asegurar que la imagen cubra todo el área */
-}
-
-/*?Carousel*/
-
-.carousel {
-    height: 1000px; /* Altura fija del carousel */
-    overflow: hidden;
-    width: 80%;
-}
-
-.carousel-inner {
-    height: 100%;
-}
-
-.carousel-item img {
-    height: 100%;
-    width: auto; /* Mantener la relación de aspecto */
-    object-fit: contain; /* Las imágenes se ajustarán al contenedor sin recortarse */
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
