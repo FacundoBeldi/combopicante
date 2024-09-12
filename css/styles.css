@@ -122,6 +122,13 @@ body {
     .content {
         width: 100%; /* Ajustar el ancho al 100% en pantallas más pequeñas */
     }
+    .image-overlay{
+        width: 100%;
+    }
+    .carousel .carousel-inner {
+        width: 100%!important; /* Ancho completo en pantallas pequeñas */
+        margin: 0!important; /* Remover el margen para asegurar que ocupe todo el ancho */
+    }
 }
 
 .consulta-btn {
@@ -184,10 +191,6 @@ body {
 /*?Intregrantes*/
 
 .integrantes {
-    background-image: url('/back.jpg');
-    background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
     color: var(--black);
     text-align: center;
     padding: 20px;
@@ -274,7 +277,7 @@ footer{
 }
 
 .footer-content h3{
-    font-size: 28px;
+    font-size: 2rem;
     font-weight: 700;
     font-weight: 400;
     text-transform: capitalize;
@@ -285,7 +288,7 @@ footer{
     max-width: 500px;
     margin: 10px auto;
     line-height: 28px;
-    font-size: 24px;
+    font-size: 1rem;
 }
 
 .socials{
