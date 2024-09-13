@@ -415,4 +415,18 @@ footer {
     .gallery img:hover {
         transform: scale(1.05);
     }
+    .h1_brand {
+        font-size: 6rem;
+    }
+    
+    .h2_brand {
+        font-size: 3rem;
+    }
+    .h1_brand_n {
+        font-size: 2rem;
+    }
+    
+    .h2_brand_n {
+        font-size: 1.5rem;
+    }
 }
