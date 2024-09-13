@@ -66,12 +66,24 @@
 
 .h1_brand{
     font-family: 'NaughtyMonster', sans-serif;
+    font-size: 9rem;
 }
 
 .h2_brand{
     font-family: 'Stash Black', sans-serif;
-    font-size: smaller;
     color: var(--off-red);
+    font-size: 4rem;
+}
+
+.h1_brand_n{
+    font-family: 'NaughtyMonster', sans-serif;
+    font-size: 5rem;
+}
+
+.h2_brand_n{
+    font-family: 'Stash Black', sans-serif;
+    color: var(--off-red);
+    font-size: 3rem;
 }
 
 /*?Banner*/
@@ -113,7 +125,6 @@ body {
 }
 
 .band p {
-    font-size: 5rem;
     color: white;
     margin: 0 0 20px;
 }
@@ -334,4 +345,33 @@ footer{
     text-transform: uppercase;
     opacity: .4;
     font-weight: 200;
+}
+
+/*?Gallery*/
+
+.intro-text p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.social-icons a {
+    color: #333;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff0000; /* Cambia a un color de hover que desees */
+}
+
+.gallery .col-md-4 {
+    text-align: center; /* Centrar las fotos */
+}
+
+.gallery img {
+    width: 100%; /* Que la imagen ocupe todo el ancho del contenedor */
+    height: 350px; /* Ajusta la altura a lo que prefieras */
+    object-fit: cover; /* Las imágenes se recortan para llenar el espacio sin perder la proporción */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
