@@ -433,4 +433,7 @@ footer {
         font-size: 2rem;
         margin: 10px;
     }
+    .gallery img:hover {
+        transform: scale(1.05);
+    }
 }
