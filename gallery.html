@@ -32,9 +32,11 @@
     <!--*Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--*Animate.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
-<body>
+<body style="background-image: url('./imgs/back_gallery.jpg'); background-size: cover; background-position: center;">
     <!--Navbar-->
 
     <nav class="navbar navbar-expand-lg fixed-top navbar-red">
@@ -56,7 +58,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page"
-                            href="https://www.instagram.com/bernabeysucombopicante/"><i
+                            href="https://www.instagram.com/bernabeyelcombopicante/"><i
                                 class="fa fa-instagram"></i>Instagram</a>
                     </li>
                     <li class="nav-item">
@@ -70,8 +72,12 @@
 
     <!-- Texto Breve debajo del Navbar -->
     <section class="intro-text text-center mt-5 pt-5">
-        <h2><span class="h1_brand_n">Bernabé</span><br><span class="h2_brand_n">Y su Combo Picante</span></h2>
-        <p>¡Conocé a la banda y disfrutá de nuestras fotos más recientes!</p>
+        <div class="animate__animated animate__bounceInDown">
+            <h2><span class="h1_brand_n">Bernabé</span><br><span class="h2_brand_n">Y su Combo Picante</span></h2>
+        </div>
+        <div class="animate__animated animate__bounceInUp">
+            <p>¡Conocé a la banda y disfrutá de nuestras fotos más recientes!</p>
+        </div>
     </section>
 
     <!-- Iconos de redes sociales -->
@@ -82,7 +88,7 @@
     </section>
 
     <!-- Galería de Fotos -->
-    <section class="gallery container" style="background-image: url('./back.jpg'); background-size: cover; background-position: center;">
+    <section class="gallery container">
         <div class="row">
             <div class="col-md-4 mb-4">
                 <img src="./imgs/imagenUno.jfif" class="img-fluid" alt="Foto 1">

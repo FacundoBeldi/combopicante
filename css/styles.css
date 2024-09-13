@@ -1,12 +1,14 @@
 /*? Declaracion de variables*/
 @font-face {
     font-family: 'NaughtyMonster';
-    src: url('../fonts/NaughtyMonster.ttf') format('truetype') /* Cambiado a truetype */
+    src: url('../fonts/NaughtyMonster.ttf') format('truetype')
+        /* Cambiado a truetype */
 }
 
 @font-face {
-    font-family: 'Stash Black'; 
-    src: url('../fonts/StashBlack.otf') format('truetype'); /* Cambiado a truetype */
+    font-family: 'Stash Black';
+    src: url('../fonts/StashBlack.otf') format('truetype');
+    /* Cambiado a truetype */
 }
 
 :root {
@@ -31,59 +33,67 @@
 
 /*?Navbar*/
 
-.navbar i{
+.navbar i {
     padding: 5px;
 }
-.navbar-brand{
+
+.navbar-brand {
     font-size: 2rem !important;
-    font-family: 'NaughtyMonster', sans-serif!important;
-    color: var(--white-smoke)!important;
+    font-family: 'NaughtyMonster', sans-serif !important;
+    color: var(--white-smoke) !important;
 }
+
 .navbar-red {
-    background-color: var(--rich-black); 
-    padding: 1rem; /* Aumentar el padding para hacerlo más grande */
-    font-size: 1.2rem; /* Aumentar el tamaño de fuente */
+    background-color: var(--rich-black);
+    padding: 1rem;
+    /* Aumentar el padding para hacerlo más grande */
+    font-size: 1.2rem;
+    /* Aumentar el tamaño de fuente */
 }
 
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")!important;
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
 }
 
 .navbar-red .navbar-brand,
 .navbar-red .nav-link {
-    color: var(--off-red); /* Cambiar el color del texto a blanco para contraste */
-    transition: .3s; /* Agregar transición para suavizar el cambio de color */
+    color: var(--off-red);
+    /* Cambiar el color del texto a blanco para contraste */
+    transition: .3s ease-in-out;
+    /* Agregar transición para suavizar el cambio de color */
 }
 
 .navbar-red .navbar-brand:hover,
 .navbar-red .nav-link:hover {
-    color: var(--dark-red); /* Cambiar el color al pasar el mouse */
+    color: var(--dark-red);
+    /* Cambiar el color al pasar el mouse */
 }
 
 .navbar-red .navbar-toggler {
-    border: 2px solid var(--off-red); /* Cambiar el color del borde del botón de toggler */
+    border: 2px solid var(--off-red);
+    /* Cambiar el color del borde del botón de toggler */
 }
 
-.h1_brand{
+.h1_brand {
     font-family: 'NaughtyMonster', sans-serif;
     font-size: 9rem;
 }
 
-.h2_brand{
+.h2_brand {
     font-family: 'Stash Black', sans-serif;
     color: var(--off-red);
     font-size: 4rem;
 }
 
-.h1_brand_n{
+.h1_brand_n {
     font-family: 'NaughtyMonster', sans-serif;
-    font-size: 5rem;
+    font-size: 4rem;
 }
 
-.h2_brand_n{
+.h2_brand_n {
     font-family: 'Stash Black', sans-serif;
     color: var(--off-red);
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 /*?Banner*/
@@ -113,7 +123,8 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 33.33%; /* Un tercio del ancho del banner */
+    width: 33.33%;
+    /* Un tercio del ancho del banner */
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -127,19 +138,6 @@ body {
 .band p {
     color: white;
     margin: 0 0 20px;
-}
-
-@media screen and (max-width: 768px) {
-    .content {
-        width: 100%; /* Ajustar el ancho al 100% en pantallas más pequeñas */
-    }
-    .image-overlay{
-        width: 100%;
-    }
-    .carousel .carousel-inner {
-        width: 100%!important; /* Ancho completo en pantallas pequeñas */
-        margin: 0!important; /* Remover el margen para asegurar que ocupe todo el ancho */
-    }
 }
 
 .consulta-btn {
@@ -156,7 +154,7 @@ body {
 
 .consulta-btn:hover {
     background-color: var(--dark-red);
-    transition: .3s;
+    transition: .3s ease-in-out;
 }
 
 .image-overlay {
@@ -165,7 +163,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.7; /* Hacer la imagen un poco opaca */
+    opacity: 0.7;
+    /* Hacer la imagen un poco opaca */
     z-index: 1;
     overflow: hidden;
 }
@@ -173,30 +172,40 @@ body {
 .image-overlay img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Asegurar que la imagen cubra todo el área */
+    object-fit: cover;
+    /* Asegurar que la imagen cubra todo el área */
 }
 
 /*?Carousel*/
 
 .carousel {
     background: var(--rich-black);
-    background-size: cover; /* Asegura que la imagen cubra toda el área */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    padding-top: 4rem; /* Espacio superior para el carrusel */
-    padding-bottom: 2rem; /* Espacio inferior para el carrusel */
+    background-size: cover;
+    /* Asegura que la imagen cubra toda el área */
+    background-position: center;
+    /* Centra la imagen */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    padding-top: 4rem;
+    /* Espacio superior para el carrusel */
+    padding-bottom: 2rem;
+    /* Espacio inferior para el carrusel */
 }
 
 .carousel .carousel-inner {
-    width: 60%; /* Ajusta el ancho del carrusel */
-    margin: 0 auto; /* Centrar horizontalmente */
+    width: 60%;
+    /* Ajusta el ancho del carrusel */
+    margin: 0 auto;
+    /* Centrar horizontalmente */
     border-radius: 5px;
 }
 
 .carousel-item img {
-    object-fit: cover; /* Asegura que las imágenes cubran bien el área del carrusel */
+    object-fit: cover;
+    /* Asegura que las imágenes cubran bien el área del carrusel */
     max-height: 1200px;
-    width: auto; /* Mantener la relación de aspecto */
+    width: auto;
+    /* Mantener la relación de aspecto */
 }
 
 /*?Intregrantes*/
@@ -206,7 +215,12 @@ body {
     text-align: center;
     padding: 20px;
     margin: 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
 .integrantes h3 {
     font-size: 3rem;
     margin: 10px;
@@ -235,9 +249,13 @@ body {
     border: 7px solid var(--dark-red);
 }
 
+.integrantes-fotos:hover {
+    animation: pulse 1s infinite;
+}
+
 /*?Sticky Button*/
 
-.sticky-button{
+.sticky-button {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -248,7 +266,7 @@ body {
     border-radius: 50%;
 }
 
-.sticky-button a{
+.sticky-button a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -259,27 +277,26 @@ body {
     text-decoration: none;
 }
 
-.sticky-button a:hover{
+.sticky-button a:hover {
     background-color: var(--dark-red);
     border-radius: 50%;
-    color: var(--color-intermedio);
-    transition: .5s;
+    color: var(--ghost-white);
 }
 
 /*? Footer*/
 
-footer{
+footer {
     bottom: 0;
     left: 0;
     right: 0;
     background-color: var(--rich-black);
     height: auto;
     width: 100vm;
-    padding-top: 10px;
+    padding-top: 20px;
     color: var(--ghost-white);
 }
 
-.footer-content{
+.footer-content {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -287,7 +304,7 @@ footer{
     text-align: center;
 }
 
-.footer-content h3{
+.footer-content h3 {
     font-size: 2rem;
     font-weight: 700;
     font-weight: 400;
@@ -295,53 +312,53 @@ footer{
     line-height: 3rem;
 }
 
-.footer-content p{
+.footer-content p {
     max-width: 500px;
     margin: 10px auto;
     line-height: 28px;
     font-size: 1rem;
 }
 
-.socials{
-    list-style: none;   
+.socials {
+    list-style: none;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 1rem 0 3rem 0;
 }
 
-.socials li{
+.socials li {
     margin: 0 10px;
 }
 
-.socials a{
+.socials a {
     text-decoration: none;
     color: var(--ghost-white);
 }
 
-.socials a i{
+.socials a i {
     font-size: 1.8rem;
-    transition: color .4s ease;
+    transition: color .3s ease;
 }
 
-.socials a:hover i{
+.socials a:hover i {
     color: var(--off-red);
 }
 
-.footer-bottom{
+.footer-bottom {
     background: var(--black);
     width: 100%;
     padding: 20px 0;
     text-align: center;
 }
 
-.footer-bottom p{
+.footer-bottom p {
     font-size: 14px;
     word-spacing: 2px;
     text-transform: capitalize;
 }
 
-.footer-bottom span{
+.footer-bottom span {
     text-transform: uppercase;
     opacity: .4;
     font-weight: 200;
@@ -361,17 +378,59 @@ footer{
 }
 
 .social-icons a:hover {
-    color: #ff0000; /* Cambia a un color de hover que desees */
+    color: var(--off-red)
 }
 
 .gallery .col-md-4 {
-    text-align: center; /* Centrar las fotos */
+    text-align: center;/* Centrar las fotos */
 }
 
 .gallery img {
-    width: 100%; /* Que la imagen ocupe todo el ancho del contenedor */
-    height: 350px; /* Ajusta la altura a lo que prefieras */
-    object-fit: cover; /* Las imágenes se recortan para llenar el espacio sin perder la proporción */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 100%;/* Que la imagen ocupe todo el ancho del contenedor */
+    height: 350px; /* Ajusta la altura*/
+    object-fit: cover;/* Las imágenes se recortan para llenar el espacio sin perder la proporción */
+    border-radius: 10px;    /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);    /* Sombra suave */
+    transition: transform 0.3s ease; /* Añade una transición suave */
+}
+
+.gallery img:hover {
+    transform: rotate(5deg) scale(1.05); /* Rota 5 grados y aumenta el tamaño un 5% */
+}
+
+/*?Media Queries*/
+
+@media screen and (max-width: 768px) {
+    .content {
+        width: 100%;
+        /* Ajustar el ancho al 100% en pantallas más pequeñas */
+    }
+
+    .image-overlay {
+        width: 100%;
+    }
+
+    .carousel .carousel-inner {
+        width: 100% !important;
+        /* Ancho completo en pantallas pequeñas */
+        margin: 0 !important;
+        /* Remover el margen para asegurar que ocupe todo el ancho */
+    }
+
+    .integrantes-fotos {
+        margin: 10px;
+    }
+
+    .integrantes-fotos img {
+        width: 180px;
+        height: 180px;
+    }
+    .integrantes h4{
+        font-size: 1.5rem;
+        margin: 10px;
+    }
+    .integrantes h3{
+        font-size: 2rem;
+        margin: 10px;
+    }
 }
