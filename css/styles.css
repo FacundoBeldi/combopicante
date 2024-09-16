@@ -2,12 +2,14 @@
 
 @font-face {
     font-family: 'NaughtyMonster';
-    src: url('../fonts/NaughtyMonster.ttf') format('truetype') /* Cambiado a truetype */
+    src: url('../fonts/NaughtyMonster.ttf') format('truetype')
+        /* Cambiado a truetype */
 }
 
 @font-face {
     font-family: 'Stash Black';
-    src: url('../fonts/StashBlack.otf') format('truetype'); /* Cambiado a truetype */
+    src: url('../fonts/StashBlack.otf') format('truetype');
+    /* Cambiado a truetype */
 }
 
 :root {
@@ -54,7 +56,8 @@ body {
 }
 
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important; /*Cambiar el icono de hamburguesa a blanco*/
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+    /*Cambiar el icono de hamburguesa a blanco*/
 }
 
 .navbar-red .navbar-brand,
@@ -180,7 +183,8 @@ body {
 
 .carousel .carousel-inner {
     width: 60%;
-    margin: 0 auto; /*Centrar el carrusel */
+    margin: 0 auto;
+    /*Centrar el carrusel */
     border-radius: 5px;
 }
 
@@ -232,7 +236,8 @@ body {
 }
 
 .integrantes-fotos:hover {
-    animation: pulse 1s infinite; /* Animación de pulso */
+    animation: pulse 1s infinite;
+    /* Animación de pulso */
 }
 
 /*?Sticky Button*/
@@ -364,27 +369,36 @@ footer {
 }
 
 .gallery .col-md-4 {
-    text-align: center;/* Centrar las fotos */
+    text-align: center;
+    /* Centrar las fotos */
 }
 
 .gallery img {
-    width: 100%;/* Que la imagen ocupe todo el ancho del contenedor */
-    height: 350px; /* Ajusta la altura*/
-    object-fit: cover;/* Las imágenes se recortan para llenar el espacio sin perder la proporción */
-    border-radius: 10px;    /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);    /* Sombra suave */
-    transition: transform 0.3s ease; /* Añade una transición suave */
+    width: 100%;
+    /* Que la imagen ocupe todo el ancho del contenedor */
+    height: 350px;
+    /* Ajusta la altura*/
+    object-fit: cover;
+    /* Las imágenes se recortan para llenar el espacio sin perder la proporción */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    transition: transform 0.3s ease;
+    /* Añade una transición suave */
 }
 
 .gallery img:hover {
-    transform: rotate(5deg) scale(1.05); /* Rota 5 grados y aumenta el tamaño un 5% */
+    transform: rotate(5deg) scale(1.05);
+    /* Rota 5 grados y aumenta el tamaño un 5% */
 }
 
 /*?Media Queries*/
 
 @media screen and (max-width: 768px) {
     .content {
-        width: 100%; /* Ajustar el ancho al 100% en pantallas más pequeñas */ 
+        width: 100%;
+        /* Ajustar el ancho al 100% en pantallas más pequeñas */
     }
 
     .image-overlay {
@@ -392,8 +406,10 @@ footer {
     }
 
     .carousel .carousel-inner {
-        width: 100% !important; /* Ancho completo en pantallas pequeñas */
-        margin: 0 !important; /* Remover el margen para asegurar que ocupe todo el ancho */
+        width: 100% !important;
+        /* Ancho completo en pantallas pequeñas */
+        margin: 0 !important;
+        /* Remover el margen para asegurar que ocupe todo el ancho */
     }
 
     .integrantes-fotos {
@@ -404,29 +420,105 @@ footer {
         width: 180px;
         height: 180px;
     }
-    .integrantes h4{
+
+    .integrantes h4 {
         font-size: 1.5rem;
         margin: 10px;
     }
-    .integrantes h3{
+
+    .integrantes h3 {
         font-size: 2rem;
         margin: 10px;
     }
+
     .gallery img:hover {
         transform: scale(1.05);
     }
+
     .h1_brand {
         font-size: 6rem;
     }
-    
+
     .h2_brand {
         font-size: 3rem;
     }
+
     .h1_brand_n {
         font-size: 2rem;
     }
-    
+
     .h2_brand_n {
         font-size: 1.5rem;
     }
+}
+
+/*?Modal*/
+
+/* El modal (fondo oscurecido) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    animation: zoomIn 0.5s;
+    /* Esto asegura que la altura se ajuste automáticamente según la proporción de la imagen */
+}
+
+/* Evita que la imagen se extienda más allá del tamaño de la ventana */
+.modal-content {
+    max-height: 80vh;
+    /* Esto asegura que la imagen no sea más alta que el 80% de la altura de la ventana */
+    object-fit: contain;
+    /* Esto asegura que la imagen se ajuste sin distorsionarse */
+}
+
+/* Efecto de zoom */
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Botón de cierre */
+.close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilo del texto descriptivo */
+#caption {
+    text-align: center;
+    color: #ccc;
+    font-size: 18px;
+    padding: 10px 20px;
 }

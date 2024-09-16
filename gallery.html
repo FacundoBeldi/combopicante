@@ -36,7 +36,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
-<body style="background-image: url('./imgs/back_gallery.jpg'); background-size: cover; background-position: center;"> <!--Imagen fondo-->
+<body style="background-image: url('./imgs/back_gallery.jpg'); background-size: cover; background-position: center;">
+    <!--Imagen fondo-->
 
     <!--Navbar-->
 
@@ -90,45 +91,52 @@
         <a href="https://wa.me/5491157573104" class="mx-2"><i class="fa fa-whatsapp fa-2x"></i></a>
     </section>
 
+    <!-- Modal para mostrar imagen -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
     <!-- Galería de Fotos -->
-     
+
     <section class="gallery container">
         <div class="row">
             <div class="col-md-4 mb-4">
-                <img src="./imgs/imagenUno.jfif" class="img-fluid" alt="Foto 1">
+                <img src="./imgs/imagenUno.jfif" class="img-fluid" alt="">
             </div>
             <div class="col-md-4 mb-4">
-                <img src="./imgs/imagenDos.jfif" class="img-fluid" alt="Foto 2">
+                <img src="./imgs/imagenDos.jfif" class="img-fluid" alt="">
             </div>
             <div class="col-md-4 mb-4">
-                <img src="./imgs/imagenCuatro.jfif" class="img-fluid" alt="Foto 3">
+                <img src="./imgs/imagenCuatro.jfif" class="img-fluid" alt="">
             </div>
             <div class="col-md-4 mb-4">
-                <img src="./imgs/imagenOcho.jfif" class="img-fluid" alt="Foto 4">
+                <img src="./imgs/imagenOcho.jfif" class="img-fluid" alt="">
             </div>
             <div class="col-md-4 mb-4">
-                <img src="./imgs/imagenSeis.jfif" class="img-fluid" alt="Foto 5">
+                <img src="./imgs/imagenSeis.jfif" class="img-fluid" alt="">
             </div>
             <div class="col-md-4 mb-4">
-                <img src="./imgs/imagenSiete.jfif" class="img-fluid" alt="Foto 6">
+                <img src="./imgs/imagenSiete.jfif" class="img-fluid" alt="">
             </div>
             <div class="col-md-4 mb-4">
-                <img src="./imgs/imagenNueve.jfif" class="img-fluid" alt="Foto 6">
+                <img src="./imgs/imagenNueve.jfif" class="img-fluid" alt="">
             </div>
             <div class="col-md-4 mb-4">
-                <img src="./imgs/imagenDiez.jfif" class="img-fluid" alt="Foto 6">
+                <img src="./imgs/imagenDiez.jfif" class="img-fluid" alt="">
             </div>
             <div class="col-md-4 mb-4">
-                <img src="./imgs/imagenOnce.jfif" class="img-fluid" alt="Foto 6">
+                <img src="./imgs/imagenOnce.jfif" class="img-fluid" alt="">
             </div>
             <div class="col-md-4 mb-4">
-                <img src="./imgs/imagenDoce.jfif" class="img-fluid" alt="Foto 6">
+                <img src="./imgs/imagenDoce.jfif" class="img-fluid" alt="">
             </div>
             <div class="col-md-4 mb-4">
-                <img src="./imgs/imagenTrece.jfif" class="img-fluid" alt="Foto 6">
+                <img src="./imgs/imagenTrece.jfif" class="img-fluid" alt="">
             </div>
             <div class="col-md-4 mb-4">
-                <img src="./imgs/imagenCatorce.jfif" class="img-fluid" alt="Foto 6">
+                <img src="./imgs/imagenCatorce.jfif" class="img-fluid" alt="">
             </div>
         </div>
     </section>
@@ -153,6 +161,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <!--Script-->
+    <script src="./main.js"></script>
 </body>
 
 </html>
